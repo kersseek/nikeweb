@@ -1,0 +1,140 @@
+body {
+    margin: 100px 0 0; /* Ajusta el valor de 80px según el tamaño de tu barra de navegación fija */
+    font-family: 'Inter', sans-serif;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../carpeta/tipografia/Inter-Light.ttf);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5% 10px 0%;
+    font-weight: bold;
+    background-color: black;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.menu-logo {
+    max-width: 100px;
+}
+
+.background-first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-box,
+.right-box {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.fig-img {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(55, 21, 117);
+    background-image: url(../carpeta/imagenes/fig15.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.fig-pricing {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.discount-price {
+    text-decoration: line-through;
+    color: #f72424;
+}
+
+
+
+
+.btn-buy {
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    background-color: rgb(29, 92, 185);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.fig-details {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    font-size: 17px;
+    text-align: justify;
+    }
+.product-details {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-details li {
+    margin-bottom: 10px;
+}
+
+
+
+@media (min-width: 768px) {
+    .background-first {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left-box {
+        width: 50%;
+        margin-right: 10px;
+    }
+
+    .right-box {
+        width: 50%;
+        margin-left: 10px;
+    }
+
+    .btn-buy {
+        width: auto;
+        max-width: none;
+        margin-top: 0;
+    }
+}

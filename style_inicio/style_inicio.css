@@ -1,0 +1,296 @@
+body {
+    margin: 0px;
+    font-family: 'Inter';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../carpeta/tipografia/Inter-Light.ttf);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    font-weight: bold;
+    background-color: black;
+    z-index: 1000;
+    box-sizing: border-box;
+    height: 8%;
+}
+
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul li {
+    padding: 0 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: white;
+}
+
+.welcome-text {
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.welcome-text-detail {
+    font-size: 20px;
+}
+
+.menu-logo,
+.link-logo {
+    width: 60px;
+    height: 20px;
+}
+
+.background-first {
+    background-image: url('../carpeta/imagenes/nike_home_1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 85vh;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-second {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.just-do-it-img {
+    width: 30%;
+}
+
+.background-third {
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(191, 218, 84);
+    gap: 10px;
+}
+
+.basquetball,
+.football,
+.tennis {
+    flex: 1;
+    position: relative;
+}
+
+.basquetball-img {
+    background-image: url(../carpeta/imagenes/basquetball.png);
+}
+
+.football-img {
+    background-image: url(../carpeta/imagenes/football.png);
+}
+
+.tennis-img {
+    background-image: url(../carpeta/imagenes/tennis.png);
+}
+
+.basquetball-img,
+.football-img,
+.tennis-img {
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+}
+
+.basquetball-txt,
+.football-txt,
+.tennis-txt {
+    text-align: center;
+    background: rgba(0, 0, 0, .7);
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 20px;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+}
+
+#welcome {
+    background-color: rgb(191, 218, 84);
+    color: black;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#featured-products {
+    background-color: black;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.featured-products-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-item {
+    width: 40%;
+    margin-bottom: 30px;
+    padding: 10px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item h3 {
+    color: black;
+    margin-bottom: 5px;
+}
+
+.product-icon {
+    font-size: 50px;
+    color: #ff6f61;
+}
+
+#testimonials {
+    background-color: white;
+    color: black;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#testimonials h2 {
+    color: black;
+}
+
+.testimonials-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.testimonial-item {
+    margin-bottom: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#cta {
+    background-color: #ff6f61;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.cta-content-text {
+    color: black;
+}
+
+
+#cta button {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#cta button:hover {
+    background-color: black;
+    color: white;
+}
+
+#newsletter {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.newsletter-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#newsletter form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 300px;
+    font-size: 16px;
+}
+
+#newsletter button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#newsletter button:hover {
+    background-color: #ff8567;
+}
+
+.footer-content {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}

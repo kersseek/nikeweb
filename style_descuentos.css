@@ -1,0 +1,150 @@
+body {
+    margin: 0px;
+    font-family: 'Inter';
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url(carpeta/tipografia/Inter-Light.ttf);
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5% 10px 5%;
+    font-weight: bold;
+    background-color: black;
+}
+
+ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+}
+
+.menu-logo,
+.link-logo {
+    width: 20%;
+}
+
+.discount-txt {
+    width: 100%;
+    height: 200%;
+    background-color: white;
+    padding-top: 7%;
+    padding-bottom: 3%;
+    text-align: center;
+    font-size: 60px;
+
+}
+
+.background-second {
+    display: inline-block;
+    display: flex;
+    background-color: white;
+    width: 85%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-left: 10%;
+    margin-bottom: 3%;
+}
+
+.fig-img11 {
+    background-image: url(carpeta/imagenes/fig11.png);
+}
+
+.fig-img12 {
+    background-image: url(carpeta/imagenes/fig12.png);
+}
+
+.fig-img13 {
+    background-image: url(carpeta/imagenes/fig13.png);
+}
+
+.fig-img14 {
+    background-image: url(carpeta/imagenes/fig14.png);
+}
+
+.fig-img15 {
+    background-image: url(carpeta/imagenes/fig15.png);
+}
+
+.fig-img16 {
+    background-image: url(carpeta/imagenes/fig16.png);
+}
+
+.fig-img17 {
+    background-image: url(carpeta/imagenes/fig17.png);
+}
+
+.fig-img18 {
+    background-image: url(carpeta/imagenes/fig18.png);
+}
+
+.fig-img1 {
+    background-image: url(carpeta/imagenes/fig1.png);
+}
+
+.fig-img11,
+.fig-img12,
+.fig-img13,
+.fig-img14,
+.fig-img15,
+.fig-img16,
+.fig-img17,
+.fig-img18,
+.fig-img1 {
+    width: 400px;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+    display: inline-flex;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.figs-txt {
+    display: inline-block;
+    background: black;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    height: 10%;
+    padding-top: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    font-size: 15px;
+}
+
+.discount-price {
+    text-decoration: line-through;
+    color: #ff8080;
+
+}
+
+.btn-buy {
+    width: 80px;
+    background-color: rgb(29, 92, 185);
+    border-color: rgb(29, 92, 185);
+    border-radius: 5px;
+    padding-top: 1%;
+    padding-bottom: 3%;
+    color: white;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
