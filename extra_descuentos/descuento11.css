@@ -1,5 +1,5 @@
 body {
-    margin: 100px 0 0; /* Ajusta el valor de 80px según el tamaño de tu barra de navegación fija */
+    margin: 100px 0 0; 
     font-family: 'Inter', sans-serif;
 }
 
@@ -102,11 +102,17 @@ nav ul li a {
 
 .fig-details {
     width: 100%;
-    max-width: 800px;
-    margin-top: 20px;
+    max-width: 950px;
+    margin-top: 30px;
     font-size: 17px;
-    text-align: justify;
-    }
+    padding: 10px; 
+    box-sizing: border-box; 
+    text-align: justify; 
+}
+.text-details-main{
+    text-align: center; 
+}
+
 .product-details {
     list-style-type: none;
     padding: 0;
@@ -116,8 +122,12 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
-
-
+@media (max-width: 600px) {
+    .fig-details {
+        font-size: 15px; 
+        margin-top: 15px; 
+    }
+}
 @media (min-width: 768px) {
     .background-first {
         flex-direction: row;

@@ -92,13 +92,13 @@ h4 {
 .just-do-it-img {
     width: 30%;
 }
-
 .background-third {
     padding: 3%;
     display: flex;
     justify-content: space-between;
     background-color: rgb(191, 218, 84);
     gap: 10px;
+    flex-wrap: wrap; 
 }
 
 .basquetball,
@@ -151,6 +151,26 @@ h4 {
     color: black;
     text-align: center;
     padding: 50px 20px;
+}
+
+
+@media (max-width: 768px) {
+    .background-third {
+        flex-direction: column; 
+    }
+    
+    .basquetball,
+    .football,
+    .tennis {
+        width: 100%; 
+        margin-bottom: 10px; 
+    }
+
+    .basquetball-img,
+    .football-img,
+    .tennis-img {
+        height: 500px; 
+    }
 }
 
 #featured-products {
