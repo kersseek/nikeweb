@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,13 +12,15 @@
 <body>
     <header>
         <nav>
-            <a href="../inicio/index.html" class="link-logo"> <img src="../carpeta/imagenes/nike_logo.png"
-                    class="menu-logo"></a>
-            <ul>
+            <a href="../inicio/index.html"><img src="../carpeta/imagenes/nike_logo.png" class="menu-logo"></a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul id="menu">
                 <li><a href="../inicio/index.html">Inicio</a></li>
-                <li><a href="../galeria.html">Galeria</a></li>
+                <li><a href="../galeria.html">Galería</a></li>
                 <li><a href="../extra.html">Descuentos</a></li>
                 <li><a href="../contacto.html">Contacto</a></li>
+                <li class="menu-exit"><a href="#menu-toggle" class="menu-close">Salir</a></li>
             </ul>
         </nav>
     </header>
@@ -26,41 +28,43 @@
     <section id="details">
         <div class="background-first">
             <div class="left-box">
-                <div class="fig-img">
-
-                </div>
+                <div class="fig-img"></div>
                 <div class="fig-pricing">
-                    <span class="discount-price"> Antes: 500.00$</span>
-                    Ahora: 320.00$
-                    <button class="btn-buy">Comprar</button>
+                    <span class="discount-price">Antes: 500.00$</span>
+                    <span>Ahora: 320.00$</span>
                 </div>
-
+                <button class="btn-buy">Comprar</button>
             </div>
-            <div class="rigth-box">
-                <div class="txt-main">
-                    <span class="text-details-main"><h2>Detalles del producto</h2></span><br><br> 
-                </div>
-
+            <div class="right-box">
                 <div class="fig-details">
-                    <span class="text-details"><h2> Nike Air Jordan Low Azul Blanco</h2></span><br><br>
-                    Descubre el estilo y la comodidad con nuestras zapatillas Nike Air Jordan Low, ahora con un
-                    increíble descuento. Estas zapatillas presentan un diseño moderno con una combinación de colores
-                    negro y gris, ideales para un look urbano y contemporáneo. Fabricadas con materiales de alta
-                    calidad, garantizan durabilidad y confort en cada paso, mientras que el icónico logotipo de Nike
-                    asegura un toque de elegancia deportiva.
-                    <br> <br>
-                    <ul class="product-details">
-                        <li><strong>Género:</strong> Unisex</li>
-                        <li><strong>Tallas disponibles:</strong> 36, 37, 38, 39, 40, 41</li>
-                        <li><strong>Material:</strong> Cuero auténtico y textil</li>
-                        <li><strong>Suela:</strong> Goma con tracción mejorada</li>
-                    </ul>
-
+                    <h2>Nike Air Jordan Low Azul Blanco</h2>
+                    <p>Descubre el estilo y la comodidad con nuestras zapatillas Nike Air Jordan Low, ahora con un
+                        increíble descuento. Estas zapatillas presentan un diseño moderno con una combinación de colores
+                        negro y gris, ideales para un look urbano y contemporáneo. Fabricadas con materiales de alta
+                        calidad, garantizan durabilidad y confort en cada paso, mientras que el icónico logotipo de Nike
+                        asegura un toque de elegancia deportiva.</p>
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <strong>Género:</strong>
+                            <p>Unisex</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Tallas disponibles:</strong>
+                            <p>36, 37, 38, 39, 40, 41</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Material:</strong>
+                            <p>Cuero auténtico y textil</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Suela:</strong>
+                            <p>Goma con tracción mejorada</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
 
 </body>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -12,13 +12,15 @@
 <body>
     <header>
         <nav>
-            <a href="../inicio/index.html" class="link-logo"> <img src="../carpeta/imagenes/nike_logo.png"
-                    class="menu-logo"></a>
-            <ul>
+            <a href="../inicio/index.html"><img src="../carpeta/imagenes/nike_logo.png" class="menu-logo"></a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul id="menu">
                 <li><a href="../inicio/index.html">Inicio</a></li>
-                <li><a href="../galeria.html">Galeria</a></li>
+                <li><a href="../galeria.html">Galería</a></li>
                 <li><a href="../extra.html">Descuentos</a></li>
                 <li><a href="../contacto.html">Contacto</a></li>
+                <li class="menu-exit"><a href="#menu-toggle" class="menu-close">Salir</a></li>
             </ul>
         </nav>
     </header>
@@ -26,41 +28,45 @@
     <section id="details">
         <div class="background-first">
             <div class="left-box">
-                <div class="fig-img">
-
-                </div>
+                <div class="fig-img"></div>
                 <div class="fig-pricing">
-                    <span class="discount-price"> Antes: 720.00$</span>
-                    Ahora: 599.00$
-                    <button class="btn-buy">Comprar</button>
+                    <span class="discount-price">Antes: 720.00$</span>
+                    <span>Ahora: 599.00$</span>
                 </div>
-
+                <button class="btn-buy">Comprar</button>
             </div>
-            <div class="rigth-box">
-                <div class="txt-main">
-                    <span class="text-details-main"><h1> Detalle del producto</h1></span><br><br>
-                </div>
-
+            <div class="right-box">
                 <div class="fig-details">
-                    <span class="text-details"><h2>Nike Air Jordan Mid Negro Blanco</h2></span><br><br>
-                    ¡Aprovecha nuestro increíble descuento en las elegantes y modernas zapatillas Nike Air Jordan Mid
-                    Negro Blanco! Estas zapatillas presentan un diseño contemporáneo con una combinación de colores
-                    negro y blanco que las hace perfectas para un look deportivo y elegante. Su confección en materiales
-                    de alta calidad asegura durabilidad y comodidad, mientras que el icónico logotipo de Jordan añade un
-                    toque de estilo inconfundible.
-                    <br> <br>
-                    <ul class="product-details">
-                        <li><strong>Género:</strong> Masculino</li>
-                        <li><strong>Tallas disponibles:</strong> 40, 41, 42, 43, 44, 45, 46</li>
-                        <li><strong>Material:</strong> Cuero genuino y malla transpirable</li>
-                        <li><strong>Suela:</strong> Goma resistente con agarre mejorado</li>
-                    </ul>
-
+                    <h2>Nike Air Jordan Mid Negro Blanco</h2>
+                    <p>¡Aprovecha nuestro increíble descuento en las elegantes y modernas zapatillas Nike Air Jordan Mid
+                        Negro Blanco! Estas zapatillas presentan un diseño contemporáneo con una combinación de colores
+                        negro y blanco que las hace perfectas para un look deportivo y elegante. Su confección en
+                        materiales
+                        de alta calidad asegura durabilidad y comodidad, mientras que el icónico logotipo de Jordan
+                        añade un
+                        toque de estilo inconfundible.</p>
+                    <div class="product-details">
+                        <div class="detail-item">
+                            <strong>Género:</strong>
+                            <p>Masculino</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Tallas disponibles:</strong>
+                            <p>40, 41, 42, 43, 44, 45, 46</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Material:</strong>
+                            <p>Cuero genuino y malla transpirable</p>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Suela:</strong>
+                            <p>Goma resistente con agarre mejorado</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
 
 </body>
 
