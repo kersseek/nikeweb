@@ -1,5 +1,5 @@
 body {
-    margin: 0px;
+    margin: 0;
     font-family: 'Inter';
     display: flex;
     flex-direction: column;
@@ -27,7 +27,28 @@ nav {
     background-color: black;
     z-index: 1000;
     box-sizing: border-box;
-    height: 8%;
+    height: 60px;
+}
+
+.menu-logo,
+.link-logo {
+    width: 60px;
+    height: 20px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    padding: 10px;
+    margin-left: auto;
 }
 
 ul {
@@ -35,6 +56,7 @@ ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    margin-left: auto;
 }
 
 ul li {
@@ -44,6 +66,63 @@ ul li {
 a {
     color: white;
     text-decoration: none;
+}
+
+
+.menu-exit {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    .menu-toggle:checked~ul {
+        display: flex;
+    }
+
+    ul li {
+        padding: 15px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-toggle:checked~ul .menu-exit {
+        display: block;
+    }
+
+    ul li:last-child a {
+        display: none;
+    }
+
+    .menu-icon:focus+ul {
+        display: flex;
+    }
+
+    .menu-icon:focus {
+        outline: none;
+    }
+
+    .menu-close:active~.menu-toggle {
+        display: none;
+    }
+
+    .just-do-it-img {
+        width: 60%;
+    }
 }
 
 h1,
@@ -63,11 +142,6 @@ h4 {
     font-size: 20px;
 }
 
-.menu-logo,
-.link-logo {
-    width: 60px;
-    height: 20px;
-}
 
 .background-first {
     background-image: url('../carpeta/imagenes/nike_home_1.png');
@@ -92,13 +166,14 @@ h4 {
 .just-do-it-img {
     width: 30%;
 }
+
 .background-third {
     padding: 3%;
     display: flex;
     justify-content: space-between;
     background-color: rgb(191, 218, 84);
     gap: 10px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .basquetball,
@@ -156,20 +231,24 @@ h4 {
 
 @media (max-width: 768px) {
     .background-third {
-        flex-direction: column; 
+        flex-direction: column;
     }
-    
+
     .basquetball,
     .football,
     .tennis {
-        width: 100%; 
-        margin-bottom: 10px; 
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .basquetball-img,
     .football-img,
     .tennis-img {
-        height: 500px; 
+        height: 500px;
+    }
+
+    .just-do-it-img {
+        width: 60%;
     }
 }
 

@@ -1,79 +1,204 @@
-
-
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: black; /* Fondo negro para toda la página */
-    color: white; /* Texto blanco por defecto */
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: white;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    flex: 1;
+    padding-top: 60px;
 }
 
-header nav {
+@font-face {
+    font-family: 'Inter';
+    src: url('../carpeta/tipografia/Inter-Light.ttf');
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 10px;
+    justify-content: space-between;
+    padding: 10px 5%;
+    font-weight: bold;
+    background-color: black;
+    z-index: 1000;
+    box-sizing: border-box;
+    height: 60px;
 }
 
-header nav ul {
-    list-style-type: none;
+.menu-logo,
+.link-logo {
+    width: 60px;
+    height: 20px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    padding: 10px;
+    margin-left: auto;
+}
+
+ul {
     display: flex;
-    gap: 10px;
     margin: 0;
     padding: 0;
+    list-style: none;
+    margin-left: auto;
 }
 
-header nav ul li {
-    margin: 0;
+ul li {
+    padding: 0 20px;
 }
 
-header nav a {
+a {
     color: white;
     text-decoration: none;
-    padding: 8px 16px;
-    display: block;
 }
 
-.menu-logo {
-    width: 50px;
+.menu-exit {
+    display: none;
 }
 
-/* Sección de contacto */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 0;
+        align-items: center;
+    }
+
+    .menu-toggle:checked~ul {
+        display: flex;
+    }
+
+    ul li {
+        padding: 15px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-toggle:checked~ul .menu-exit {
+        display: block;
+    }
+
+    ul li:last-child a {
+        display: none;
+    }
+
+    .menu-icon:focus+ul {
+        display: flex;
+    }
+
+    .menu-icon:focus {
+        outline: none;
+    }
+
+    .menu-close:active~.menu-toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+
+    #contact-first {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-card,
+    .contact-form {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .btn-googleMaps,
+    .btn-submit {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .btn-googleMaps {
+        width: 92%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    a .inputs-form,
+    .inputs-form-txtArea {
+        font-size: 14px;
+    }
+
+    .btn-googleMaps,
+    .btn-submit {
+        padding: 12px 0;
+        font-size: 16px;
+    }
+
+    .btn-googleMaps {
+        width: 92%;
+    }
+}
+
 #contact-first {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
 }
 
 .background-first {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
 }
 
-.location-card, .contact-form {
+.location-card,
+.contact-form {
     padding: 20px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #1c1c1c; /* Fondo oscuro para las tarjetas */
-    color: white; /* Texto blanco dentro de las tarjetas */
+    background-color: #1c1c1c;
+    color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 90%;
+    text-align: left;
 }
 
-.location-card {
-    flex: 1 1 45%;
-    min-width: 280px;
+.location-card h2,
+.contact-form h2 {
+    text-align: center;
 }
 
 .store-img {
-    background-image: url('carpeta/imagenes/store.png'); /* Reemplaza con la imagen adecuada */
+    background-image: url('carpeta/imagenes/store.png');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -82,17 +207,19 @@ header nav a {
     border-radius: 5px;
 }
 
-.inputs-form, .inputs-form-txtArea {
-    width: 100%;
+.inputs-form,
+.inputs-form-txtArea {
+    width: calc(100% - 22px);
     padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #333; /* Fondo oscuro para los inputs */
-    color: white; /* Texto blanco en los inputs */
 }
 
-.btn-googleMaps {
+
+
+.btn-googleMaps,
+.btn-submit {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 10px;
@@ -102,22 +229,18 @@ header nav a {
     border-radius: 5px;
     text-align: center;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.btn-googleMaps:hover {
+.btn-googleMaps:hover,
+.btn-submit:hover {
     background-color: #357ae8;
-}
-
-.background-form {
-    background-color: black;
-    align-items: center;
 }
 
 .contactanos-h {
     margin-bottom: 20px;
 }
 
-/* Redes sociales */
 #contact-second {
     text-align: center;
     margin: 20px 0;
@@ -138,55 +261,10 @@ header nav a {
     border-radius: 50%;
 }
 
-.link-media-facebook,
-.link-media-instagram {
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
 .link-media-facebook {
     background-image: url("carpeta/imagenes/facebook_logo.png");
 }
 
 .link-media-instagram {
     background-image: url("carpeta/imagenes/instagram_logo.png");
-}
-
-/* Media Queries */
-@media (max-width: 760px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #contact-first {
-        flex-direction: column;
-    }
-
-    .location-card, .contact-form {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .btn-googleMaps {
-        width: 100%;
-        padding: 15px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .menu-logo {
-        width: 30px;
-    }
-
-    .inputs-form, .inputs-form-txtArea {
-        font-size: 14px;
-    }
-
-    .btn-googleMaps {
-        padding: 12px 0;
-        font-size: 16px;
-    }
 }
