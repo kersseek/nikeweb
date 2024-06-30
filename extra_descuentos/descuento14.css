@@ -128,6 +128,15 @@ a {
         margin-top: 10%;
     }
 
+    .left-box {
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+
+    #details {
+        padding: 0px !important;
+    }
+
 }
 
 @media (min-width: 769px) {
@@ -165,7 +174,7 @@ a {
 .fig-img {
     width: 100%;
     height: 400px;
-    background-image: url('../carpeta/imagenes/fig14.png');
+    background-image: url("../carpeta/imagenes/fig14.png");
     background-position: center;
     background-size: cover;
     border-radius: 10px;
