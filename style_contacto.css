@@ -15,7 +15,7 @@ body {
 
 @font-face {
     font-family: 'Inter';
-    src: url('../carpeta/tipografia/Inter-Light.ttf');
+    src: url('carpeta/tipografia/Inter-Light.ttf');
 }
 
 nav {
