@@ -161,7 +161,13 @@ a {
     }
 
     .btn-googleMaps {
-        width: 92%;
+        width: 89%;
+    }
+}
+
+@media (max-width: 375px) {
+    .btn-googleMaps {
+        width: 87%;
     }
 }
 
